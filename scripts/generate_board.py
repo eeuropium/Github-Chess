@@ -6,8 +6,8 @@ from io import BytesIO
 import os
 
 # --- Configuration ---
-STATE_FILE = "state.json"
-IMAGE_PATH = "board_image.png"
+STATE_FILE = "../state.json"
+IMAGE_PATH = "../board_image.png"
 
 def generate_board_image(output_path: str):
     """
