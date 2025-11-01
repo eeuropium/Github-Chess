@@ -1,4 +1,4 @@
-import chess
+# import chess
 import json
 import sys
 from generate_board import generate_board_image # generate board svg image function
@@ -13,18 +13,21 @@ def main():
     with open('state.json', 'r') as f:
         state = json.load(f)
 
-    board = chess.Board(state["board"])
+    # board = chess.Board(state["board"])
 
-    board.push_uci(move)
+    # board.push_uci(move)
 
-    state["board"] = board.fen()
+    # for testing
+    # state["board"] = board.fen()
+    state["board"] = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+    
     state["moves"].append(move)
     state["turn"] = "black" if state["turn"] == "white" else "white"
 
     with open("state.json", "w") as f:
         json.dump(state, f)
 
-    assert(False)
+    # assert(False)
     generate_board_image(fen=state["board"], output_path="../board_image.png")
 
 main()    
