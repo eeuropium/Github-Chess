@@ -17,6 +17,10 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Install dependencies
+        run: |
+          pip install python-chess
+
       - name: Process move
         run: |
           echo "Move payload: ${{ github.event.client_payload }}"
