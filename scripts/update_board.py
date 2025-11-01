@@ -23,7 +23,8 @@ def main():
 
     with open("state.json", "w") as f:
         json.dump(state, f)
-    
+
+    assert(False)
     generate_board_image(fen=state["board"], output_path="../board_image.png")
 
 main()    
