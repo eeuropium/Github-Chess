@@ -34,6 +34,8 @@ jobs:
           echo "--- If .git is missing, checkout didn't work ---"
           ls -a $GITHUB_WORKSPACE
           git --version
+          git config --global --add safe.directory /__w/Github-Chess/Github-Chess
+          git config user.name "github-actions[bot]"
           git status
 
       - name: Commit updated board and README
