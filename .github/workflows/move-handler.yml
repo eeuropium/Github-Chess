@@ -33,6 +33,8 @@ jobs:
           ls -a
           echo "--- If .git is missing, checkout didn't work ---"
           ls -a $GITHUB_WORKSPACE
+          git --version
+          git status
 
       - name: Commit updated board and README
         working-directory: ${{ github.workspace }}
