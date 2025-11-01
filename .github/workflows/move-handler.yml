@@ -30,4 +30,6 @@ jobs:
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add state.json README.md
           git commit -m "Apply move ${{ github.event.client_payload.move }}" || echo "No changes"
+          git pull
+          git rebase
           git push
