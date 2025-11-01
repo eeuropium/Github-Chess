@@ -28,6 +28,6 @@ def main():
         json.dump(state, f)
 
     # assert(False)
-    generate_board_image(fen=state["board"], output_path="../board_image.png")
+    # generate_board_image(fen=state["board"], output_path="../board_image.png")
 
 main()    
