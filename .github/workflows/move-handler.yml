@@ -8,6 +8,8 @@ on:
 jobs:
   handle-move:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     container:
       image: ghcr.io/aragornofkebroyd/github-chess/chess-env:latest
 
