@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-GITHUB_TOKEN = os.environ["GITHUB_TOKEN"]
+GITHUB_TOKEN = os.environ.get("ACCESS_TOKEN")
 
 @app.route("/")
 def hello():
