@@ -32,6 +32,7 @@ def move():
     print("Response body:", response.text)
 
     # update board image
+    assert(False)
     generate_board_image(fen=state["board"], output_path="../board_image.png")
     
     return redirect(redirect_url)
