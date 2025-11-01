@@ -31,4 +31,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: ghcr.io/aragornofbebroyd/github-chess/chess-env:latest
+          tags: ghcr.io/aragornofkebroyd/github-chess/chess-env:latest
