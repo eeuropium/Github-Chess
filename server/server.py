@@ -18,7 +18,7 @@ def move():
 
     # Call GitHub API to trigger repository_dispatch
     payload = {"game": game, "move": move}
-    requests.post(
+    response = requests.post(
         "https://api.github.com/repos/AragornOfKebroyd/Github-Chess/dispatches",
         headers={
             "Authorization": f"token {GITHUB_TOKEN}",
@@ -26,6 +26,9 @@ def move():
         },
         json={"event_type": "make_move", "client_payload": payload},
     )
+
+    print("Status code:", response.status_code)
+    print("Response body:", response.text)
 
     return redirect(redirect_url)
 
