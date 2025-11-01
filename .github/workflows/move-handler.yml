@@ -25,6 +25,14 @@ jobs:
         run: |
           echo "Move payload: ${{ github.event.client_payload }}"
           python scripts/update_board.py "${{ github.event.client_payload.game }}" "${{ github.event.client_payload.move }}"
+      
+      - name: Debug paths
+        run: |
+          echo "PWD: $(pwd)"
+          echo "GITHUB_WORKSPACE: $GITHUB_WORKSPACE"
+          ls -a
+          echo "--- If .git is missing, checkout didn't work ---"
+          ls -a $GITHUB_WORKSPACE
 
       - name: Commit updated board and README
         working-directory: ${{ github.workspace }}
